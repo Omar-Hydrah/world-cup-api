@@ -1,9 +1,9 @@
 var express = require("express");
 var app     = express();
 var session = require("express-session");
-// var morgan  = require("morgan");      
 var csrf    = require("csurf");
-// var passport     = require("passport");     
+// var morgan    = require("morgan");      
+// var passport  = require("passport");     
 var cookieParser = require("cookie-parser");
 var bodyParser   = require("body-parser");
 
