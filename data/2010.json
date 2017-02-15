@@ -86,28 +86,30 @@
 
 		],
 		"secondRound": [
-			{ "teams": ["Uruguay", "Korea Republic"], "result": "2-1", "winner": "Uruguay" },
-			{ "teams": ["USA", "Ghana"], "result": "1-2", "winner": "Ghana" },
-			{ "teams": ["Germany", "England"], "result": "4-1" , "winner": "Germany"},
-			{ "teams": ["Argentina", "Mexico"], "result": "3-1", "winner": "Argentina" },
-			{ "teams": ["Netherlands", "Slovakia"], "result": "2-1", "winner": "Netherlands" },
-			{ "teams": ["Brazil", "Chile"], "result": "3-0", "winner": "Brazil" },
+			{ "teams": ["Uruguay", "Korea Republic"], "result": "2-1" },
+			{ "teams": ["USA", "Ghana"], "result": "1-2"},
+			{ "teams": ["Germany", "England"], "result": "4-1" },
+			{ "teams": ["Argentina", "Mexico"], "result": "3-1"},
+			{ "teams": ["Netherlands", "Slovakia"], "result": "2-1"},
+			{ "teams": ["Brazil", "Chile"], "result": "3-0" },
 			{ "teams": ["Paraguay", "Japan"], "result": "0-0", "winner": "Paraguay" },
-			{ "teams": ["Spain", "Portugal"], "result": "1-0", "winner": "Spain" }
+			{ "teams": ["Spain", "Portugal"], "result": "1-0"}
 		],
 		"thirdRound": [
-			{ "teams": ["Netherlands", "Brazil"], "result": "2-1", "winner": "Netherlands" },
+			{ "teams": ["Netherlands", "Brazil"], "result": "2-1"},
 			{ "teams": ["Uruguay", "Ghana"], "result": "1-1", "winner": "Uruguay" },
-			{ "teams": ["Argentina", "Germany"], "result": "0-4", "winner" : "Germany" },
+			{ "teams": ["Argentina", "Germany"], "result": "0-4"},
 			{ "teams": ["Paraguay", "Spain"], "result": "0-1" }
 		],
 		"fourthRound": [
-			{ "teams": ["Uruguay", "Netherlands"], "result": "2-3", "winner": "Netherlands" },
-			{ "teams": ["Germany", "Spain"], "result": "0-1", "winner": "Spain" }
+			{ "teams": ["Uruguay", "Netherlands"], "result": "2-3"},
+			{ "teams": ["Germany", "Spain"], "result": "0-1"}
 		],
 		"finalRound": [
-			{ "teams": ["Uruguay", "Germany"], "result": "2-3", "winner": "Germany" },
-			{ "teams": ["Netherlands", "Spain"], "result": "0-1" }
+			{"teams": ["Uruguay", "Germany"], "result": "2-3"},
+			{"teams": ["Netherlands", "Spain"], "result": "0-1"}
 		]
-	}
+	},
+	"rankings": {"firstPlace": "Spain", "secondPlace": "Netherlands", "thirdPlace": "Germany"}
+
 }
