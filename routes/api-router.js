@@ -190,7 +190,7 @@ function findMatch(matches, firstTeam, secondTeam){
 	if(! match){
 		return false;
 	}else{
-		return match;
+		return `${match.teams[0]} vs ${match.teams[1]} : ${match.result}`;
 	}
 }
 
