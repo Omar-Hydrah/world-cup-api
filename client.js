@@ -1,17 +1,16 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
-import {Router, Route, hashHistory} from "react-router";
+import {Router, Route, hashHistory, IndexRoute} from "react-router";
 
 var data = require("./data/2010.json");
 // data = JSON.parse(data);
 
 // React components
+var Home       = require("./components/home-component.js");
 var Teams      = require("./components/teams-component.js");
 var Matches    = require("./components/matches-component.js");
 var Rankings   = require("./components/rankings-component.js");
 var Navigation = require("./components/navigation-component.js");
-var FirstRound = require("./components/first-round.js");
-var SecondRound = require("./components/second-round.js");
 
 var App = React.createClass({
 
@@ -30,7 +29,7 @@ var App = React.createClass({
 
 		return(
 			<div>
-				<h1>Merhaba React'tan</h1>
+				<h1>2010 World cup, from React's perspective</h1>
 				<Navigation activeItem={this.props.location.pathname}/>
 				{children}
 			</div>
@@ -40,7 +39,8 @@ var App = React.createClass({
 
 var routes = (
 	<Router history={hashHistory}>
-		<Route path="/" component={App}>
+		<Route path="/" component={App}  >
+			<IndexRoute component={Home} />
 			<Route path="teams" component={Teams} />
 			<Route path="matches" component={Matches} />
 			{/* matches/* will accept any round passed into it */}

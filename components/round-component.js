@@ -8,7 +8,6 @@ var Round = React.createClass({
 		var round = this.props.round;
 		// Properly transforms the round variable, to access the json data.
 		var currentRound; 
-		var matches; // Round matches.
 
 		// The currentRound will store the round
 		// which will be used to access the data.rounds object
@@ -29,23 +28,21 @@ var Round = React.createClass({
 				currentRound = "finalRound";
 				break;
 			default:
-				currentRound = "";
+				currentRound = "firstRound";
 				break;
 		}
 
-		if(currentRound != ""){
-			// Returning the matches based on the selceted round
-			matches = this.props.data.rounds[currentRound].map(function(match, index){
-				return (
-					<tr key={index}>
-						{/* Default Bootstrap border-top is causing trouble when displaying data */}
-						<td style={{borderTop: "0"}}>{match.teams[0]}</td>
-						<td style={{borderTop: "0"}}>{match.result}</td>
-						<td style={{borderTop: "0"}} className="pull-right" >{match.teams[1]}</td>
-					</tr>
-				);
-			});
-		}
+		// Returning the matches based on the selceted round
+		var matches = this.props.data.rounds[currentRound].map(function(match, index){
+			return (
+				<tr key={index}>
+					{/* Default Bootstrap border-top is causing trouble when displaying data */}
+					<td style={{borderTop: "0"}}>{match.teams[0]}</td>
+					<td style={{borderTop: "0"}}>{match.result}</td>
+					<td style={{borderTop: "0"}} className="pull-right" >{match.teams[1]}</td>
+				</tr>
+			);
+		});
 
 		return (
 			<div className="row">
@@ -55,12 +52,12 @@ var Round = React.createClass({
 							<tr>
 
 								<th></th>
-								<th>{(currentRound.length > 0) ? "Vs" : null}</th>
+								<th>Vs</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
-							{ (currentRound.length > 0) ?  matches : null}
+							{matches}
 						</tbody>
 					</table>
 				</div>

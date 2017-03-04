@@ -13,7 +13,7 @@ var Navigation = React.createClass({
 						<li className={(this.props.activeItem == "/teams") ? "active" : null} >
 							<Link to={"/teams"}>Teams</Link>
 						</li>
-						<li className= {(this.props.activeItem == "/matches") ? "active": null}>
+						<li className= {(this.props.activeItem.match(/matches/)) ? "active": null}>
 							<Link to={"/matches"}>Matches</Link>
 						</li>
 						<li className={(this.props.activeItem == "/rankings") ? "active" : null}>
@@ -25,6 +25,5 @@ var Navigation = React.createClass({
 		);
 	}, // render
 });
-
 
 module.exports = Navigation;

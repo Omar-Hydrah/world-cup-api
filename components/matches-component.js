@@ -1,5 +1,5 @@
 var React = require("react");
-import {Link} from "react-router";
+import {Link, DefaultRoute} from "react-router";
 
 
 // React Components
@@ -25,7 +25,7 @@ var Matches = React.createClass({
 			<div>
 				<br /><br />
 				<ul className="nav nav-tabs nav-justified">
-					<li className={(activeItem == "/matches/first-round") ? "active" : null} >
+					<li className={(activeItem.match(/(first-round|^\/matches$)/)) ? "active" : null} >
 						<Link to={"/matches/first-round"} >First Round</Link>
 					</li>
 					<li className={(activeItem == "/matches/second-round") ? "active" : null}>
